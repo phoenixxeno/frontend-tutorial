@@ -1,0 +1,49 @@
+:root {
+  --primary-bg-color: blue;
+  --white-bg-color: white;
+  --grey-bg-color: grey;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+}
+
+.header-container {
+  /* background-color: var(--primary-bg-color); */
+  width: 100%;
+  height: calc(var(--calc-vh, 1vh) * 10);
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  display: block;
+  width: 5rem;
+  border-radius: 0.25rem;
+}
+
+.main-container {
+  background-color: var(--white-bg-color);
+  width: 100%;
+  height: calc(var(--calc-vh, 1vh) * 75);
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-container {
+  background-color: var(--grey-bg-color);
+  width: 100%;
+  height: calc(var(--calc-vh, 1vh) * 15);
+}
+
+.footer {
+  width: 100%;
+  height: 100%;
+}
