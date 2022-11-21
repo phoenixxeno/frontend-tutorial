@@ -107,3 +107,71 @@ a {
   left: 3rem;
   z-index: -1;
 }
+
+.box-parent {
+  width: 100%;
+  height: 15rem;
+  border: 0.25rem solid black;
+}
+
+.box-child {
+  /* margin: 2rem; */
+  margin: 0 0 0;
+  /* padding: 2rem; */
+  padding: 2rem 0 0 0;
+  border: 0.25rem solid red;
+}
+
+.block {
+  margin: 1rem 0 1rem;
+  width: 50%;
+  height: 8rem;
+  background-color: red;
+}
+
+.inline {
+  width: 100%;
+  height: 8rem;
+  background-color: orange;
+}
+
+.inline-block {
+  display: inline-block;
+  width: 40%;
+  height: 8rem;
+  background-color: green;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+}
+
+.float {
+  width: 5rem;
+  height: 5rem;
+  background-color: red;
+  float: right;
+}
+
+.clear-float {
+  clear: both;
+}
+
+.test-float {
+  width: 5rem;
+  height: 5rem;
+  background-color: orange;
+  float: left;
+}
+
+.test-float:nth-child(2) {
+  /* width: 5rem;
+  height: 5rem;
+  background-color: orange; */
+  float: right;
+}
+
+.test-clear-float {
+  clear: both;
+}
