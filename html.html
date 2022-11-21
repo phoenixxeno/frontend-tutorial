@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./html.css" />
+    <script></script>
+    <title>html</title>
+    <style>
+      /* 內嵌（embedding） */
+      .p-style {
+        /* color: red; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 常用的Html元素 -->
+    <div></div>
+    <header></header>
+    <main></main>
+    <footer></footer>
+    <img src="" alt="" />
+    <a href=""></a>
+    <nav>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+
+    <!-- 使用CSS的同列（inline）寫法 -->
+    <p style="color: #ff8888; background-color: blue">test</p>
+    <!-- 使用CSS的內嵌（embedding）寫法 -->
+    <!-- 替p元素取class名和id名 -->
+    <p class="p-style" id="p-id">test2</p>
+    <!-- 替a元素取class名和id名 -->
+    <a href="" class="a-style" id="a-id">test3</a>
+
+    <!-- table元素 -->
+    <table class="table-style">
+      <tr>
+        <th>test4</th>
+        <th>test5</th>
+      </tr>
+      <tr>
+        <td>test6</td>
+        <td>test7</td>
+      </tr>
+    </table>
+    <table class="table-style2">
+      <tr>
+        <td>test4</td>
+        <td>test5</td>
+      </tr>
+      <tr>
+        <td>test6</td>
+        <td>test7</td>
+      </tr>
+    </table>
+    <table class="table-style3">
+      <!-- 第一列 -->
+      <tr>
+        <!-- 這個擁有colspan="2"屬性的欄位拓展了兩格 -->
+        <td colspan="2">
+          <img
+            class="logo"
+            src="https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg"
+            alt="logo image"
+          />
+        </td>
+      </tr>
+
+      <!-- 第二列 -->
+      <tr>
+        <!-- 第一個欄位 -->
+        <td>
+          <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+          </ul>
+        </td>
+
+        <!-- 第二個欄位 -->
+        <td>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quod,
+        </td>
+      </tr>
+
+      <!-- 第三列 -->
+      <tr>
+        <!-- 這個擁有colspan="2"屬性的欄位拓展了兩格 -->
+        <td colspan="2">footer</td>
+      </tr>
+    </table>
+
+    <!-- div元素 -->
+    <div class="app">
+      <header class="header"></header>
+
+      <main class="main"></main>
+
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>
