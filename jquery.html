@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./jquery/jquery.min.js" defer></script>
+    <script src="./js/test-jquery.js" defer></script>
     <script>
       function handleClick() {
         let modifyButton = $('button').text('modify button')
@@ -15,12 +16,44 @@
         // $('button[id=btnHandleClickWithCss]').css('font-size', '20px')
         $('#btnHandleClickWithCss').css('font-size', '20px')
       }
+      let list = [
+        {
+          id: 1,
+          name: 'test1',
+        },
+        {
+          id: 2,
+          name: 'test2',
+        },
+        {
+          id: 3,
+          name: 'test3',
+        },
+      ]
       function handleClickWithHtml() {
         // alert($('.parent').html())
-        $('.parent').html(`
-            <div class="child">after1</div>
-            <div class="child">after3</div>
-        `)
+        let result = ''
+        for (let item of list) {
+          result += `<div id="${item.id}">${item.name}</div>`
+        }
+        $('.parent').html(result)
+      }
+      function handleClickWithAppend() {
+        $('#parent').empty()
+        for (let item of list) {
+          $('#parent').append(
+            `<div id="${item.id}">${item.name + item.name}</div>`
+          )
+          $('#parent').append(
+            `<div id="${item.id}">${item.name + item.name}</div>`
+          )
+        }
+      }
+      function handleClickWithFontSize() {
+        $('.btn-font-size').css('font-size', '40px')
+      }
+      function handleClickWithBackgroundColor() {
+        $('#btnBackgroundColor').css('background-color', 'red')
       }
     </script>
     <title>jquery</title>
@@ -42,6 +75,113 @@
       <div class="child">test1</div>
       <div class="child">test2</div>
       <div class="child">test3</div>
+    </div>
+
+    <div
+      style="border: 0.25rem solid orange; width: 100%; height: 8rem"
+      id="parent"
+      onclick="handleClickWithAppend()"
+    >
+      <div class="child">test1</div>
+      <div class="child">test2</div>
+      <div class="child">test3</div>
+    </div>
+
+    <!-- 利用class選擇器去變換這個按鈕的字體大小 -->
+    <button class="btn-font-size" onclick="handleClickWithFontSize()">
+      btn-font-size
+    </button>
+    <!-- 利用id選擇器去變換這個按鈕的背景顏色 -->
+    <button id="btnBackgroundColor" onclick="handleClickWithBackgroundColor()">
+      btnBackgroundColor
+    </button>
+
+    <div id="divFadeOut">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        repudiandae eveniet neque, nesciunt doloribus sunt incidunt unde sint
+        dicta accusamus.
+      </p>
+    </div>
+
+    <div id="divHide">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        repudiandae eveniet neque, nesciunt doloribus sunt incidunt unde sint
+        dicta accusamus.
+      </p>
+    </div>
+
+    <div id="divFadeIn">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        repudiandae eveniet neque, nesciunt doloribus sunt incidunt unde sint
+        dicta accusamus.
+      </p>
+    </div>
+
+    <div id="divShow">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        repudiandae eveniet neque, nesciunt doloribus sunt incidunt unde sint
+        dicta accusamus.
+      </p>
+    </div>
+
+    <div id="divToggle">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        repudiandae eveniet neque, nesciunt doloribus sunt incidunt unde sint
+        dicta accusamus.
+      </p>
+    </div>
+    <button id="btnToggle">toggle</button>
+
+    <div id="divFadeToggle">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        repudiandae eveniet neque, nesciunt doloribus sunt incidunt unde sint
+        dicta accusamus.
+      </p>
+    </div>
+    <button id="btnFadeToggle">fade toggle</button>
+
+    <div id="divSlideUp">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        repudiandae eveniet neque, nesciunt doloribus sunt incidunt unde sint
+        dicta accusamus.
+      </p>
+    </div>
+
+    <div id="divSlideDown">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        repudiandae eveniet neque, nesciunt doloribus sunt incidunt unde sint
+        dicta accusamus.
+      </p>
+    </div>
+
+    <div id="divSlideToggle">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        repudiandae eveniet neque, nesciunt doloribus sunt incidunt unde sint
+        dicta accusamus.
+      </p>
+    </div>
+    <button id="btnSlideToggle">slide toggle</button>
+
+    <div id="divAnimation">
+      <p id="p1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        repudiandae eveniet neque, nesciunt doloribus sunt incidunt unde sint
+        dicta accusamus.
+      </p>
+      <p id="p2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        repudiandae eveniet neque, nesciunt doloribus sunt incidunt unde sint
+        dicta accusamus.
+      </p>
     </div>
   </body>
 </html>
