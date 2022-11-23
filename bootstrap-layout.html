@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/bootstrap-layout.css" />
+    <script src="./bootstrap/popper.min.js" defer></script>
     <script src="./bootstrap/js/bootstrap.min.js" defer></script>
     <script src="./js/bootstrap-layout.js" defer></script>
     <title>bootstrap-layout</title>
@@ -86,8 +87,89 @@
         </header>
       </div>
 
-      <div class="col-12 main-container">
-        <main class="main"></main>
+      <div class="col-12 col-md-8 main-container pt-5">
+        <main class="main">
+          <div class="row justify-content-center align-items-center g-0 gy-4">
+            <div class="col-md-8">
+              <h1 class="text-center">To Do List</h1>
+            </div>
+
+            <div class="col-md-6">
+              <div
+                class="row justify-content-center align-items-center g-0 gy-4"
+              >
+                <div class="col-9">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      aria-label="Text input with segmented dropdown button"
+                    />
+                    <button
+                      id="btnInInputBar"
+                      type="button"
+                      class="btn btn-outline-success"
+                    >
+                      Create
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item aLink-create">Create</a></li>
+                      <li>
+                        <a class="dropdown-item aLink-search">Search</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-9">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <input
+                        class="form-check-input me-1"
+                        type="checkbox"
+                        value=""
+                        id="firstCheckbox"
+                      />
+                      <label class="form-check-label" for="firstCheckbox"
+                        >First checkbox</label
+                      >
+                    </li>
+                    <li class="list-group-item">
+                      <input
+                        class="form-check-input me-1"
+                        type="checkbox"
+                        value=""
+                        id="secondCheckbox"
+                      />
+                      <label class="form-check-label" for="secondCheckbox"
+                        >Second checkbox</label
+                      >
+                    </li>
+                    <li class="list-group-item">
+                      <input
+                        class="form-check-input me-1"
+                        type="checkbox"
+                        value=""
+                        id="thirdCheckbox"
+                      />
+                      <label class="form-check-label" for="thirdCheckbox"
+                        >Third checkbox</label
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
 
       <div class="col-12 footer-container">
