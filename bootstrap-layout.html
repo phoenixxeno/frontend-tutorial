@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/bootstrap-layout.css" />
+    <script src="./jquery/jquery.min.js" defer></script>
     <script src="./bootstrap/popper.min.js" defer></script>
     <script src="./bootstrap/js/bootstrap.min.js" defer></script>
     <script src="./js/bootstrap-layout.js" defer></script>
+    <script src="./js/functions/toDoListFunctions.js" defer></script>
+    <script src="./js/toDoList.js" defer></script>
     <title>bootstrap-layout</title>
   </head>
   <body>
@@ -101,6 +104,7 @@
                 <div class="col-9">
                   <div class="input-group">
                     <input
+                      id="txtName"
                       type="text"
                       class="form-control"
                       aria-label="Text input with segmented dropdown button"
@@ -130,41 +134,7 @@
                 </div>
 
                 <div class="col-9">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <input
-                        class="form-check-input me-1"
-                        type="checkbox"
-                        value=""
-                        id="firstCheckbox"
-                      />
-                      <label class="form-check-label" for="firstCheckbox"
-                        >First checkbox</label
-                      >
-                    </li>
-                    <li class="list-group-item">
-                      <input
-                        class="form-check-input me-1"
-                        type="checkbox"
-                        value=""
-                        id="secondCheckbox"
-                      />
-                      <label class="form-check-label" for="secondCheckbox"
-                        >Second checkbox</label
-                      >
-                    </li>
-                    <li class="list-group-item">
-                      <input
-                        class="form-check-input me-1"
-                        type="checkbox"
-                        value=""
-                        id="thirdCheckbox"
-                      />
-                      <label class="form-check-label" for="thirdCheckbox"
-                        >Third checkbox</label
-                      >
-                    </li>
-                  </ul>
+                  <ul id="ulToDoList" class="list-group"></ul>
                 </div>
               </div>
             </div>
