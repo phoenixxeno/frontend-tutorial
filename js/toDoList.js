@@ -22,6 +22,16 @@ $(document).ready(function () {
       return
     }
 
+    if ($(this).text() === 'Search') {
+      if (!strName) {
+        alert('請輸入ToDo的名字。')
+        return
+      }
+
+      getToDoList(strName)
+      return
+    }
+
     if (!strName) {
       alert('請輸入ToDo的名字。')
       return
@@ -70,5 +80,21 @@ $(document).ready(function () {
       .removeClass('btn-outline-success')
       .addClass('btn-outline-secondary')
       .text('Search')
+  })
+
+  $(document).on('click', 'input[id*=ckb]', function (e) {
+    e.preventDefault()
+
+    let strId = $(this).prop('id').split('_')[1]
+    let boolIsChecked = $(this).is(':checked')
+    sessionStorage.setItem(
+      'ulToDoListInfo',
+      JSON.stringify({
+        id: strId,
+        isChecked: boolIsChecked,
+      })
+    )
+
+    setIsCheckedOfToDo(strId, boolIsChecked)
   })
 })

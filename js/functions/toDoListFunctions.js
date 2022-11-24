@@ -1,4 +1,4 @@
-function getToDoList(strName) {
+function getToDoList(strName = '') {
   let objPostData = { name: strName }
 
   $.ajax({
@@ -198,6 +198,38 @@ function deleteToDo(strId) {
             </li>
           `)
         }
+      }
+    },
+    error: function (e) {
+      console.log(e)
+      alert('Failed')
+    },
+  })
+}
+
+function setIsCheckedOfToDo(strId, boolIsChecked) {
+  let objPostData = { id: strId, checked: boolIsChecked }
+
+  $.ajax({
+    url: 'http://localhost:8889/setIsCheckedOfToDo',
+    method: 'POST',
+    contentType: 'application/json',
+    dataType: 'json',
+    data: JSON.stringify(objPostData),
+    success: function (toDoRes) {
+      let { statusCode, message, toDoList } = toDoRes
+
+      if (statusCode === '400' || message === '必要參數缺失，請再嘗試。') {
+        $('#ulToDoList').html('必要參數缺失，請再嘗試。')
+      } else if (statusCode === '500' || message === '發生錯誤，請再嘗試。') {
+        $('#ulToDoList').html('發生錯誤，請再嘗試。')
+      } else if (!toDoList || !toDoList.length) {
+        $('#ulToDoList').html('暫無資料。')
+      } else {
+        let { id, isChecked } = JSON.parse(
+          sessionStorage.getItem('ulToDoListInfo')
+        )
+        $('#ulToDoList').find(`.ckb_${id}`).prop('checked', isChecked)
       }
     },
     error: function (e) {
