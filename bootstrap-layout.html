@@ -18,7 +18,7 @@
     <div class="app row justify-content-center align-items-center g-0">
       <div class="col-12 header-container">
         <header class="header navbar navbar-expand-lg bg-light">
-          <div class="container-fluid px-5">
+          <div class="container-fluid px-4">
             <a class="navbar-brand" href="#">
               <img
                 class="logo"
@@ -90,18 +90,18 @@
         </header>
       </div>
 
-      <div class="col-12 col-md-8 main-container pt-5">
+      <div class="col-12 main-container pt-5">
         <main class="main">
           <div class="row justify-content-center align-items-center g-0 gy-4">
-            <div class="col-md-8">
+            <div class="col-md-10">
               <h1 class="text-center">To Do List</h1>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-7 col-lg-6 col-xl-5 col-xxl-4">
               <div
                 class="row justify-content-center align-items-center g-0 gy-4"
               >
-                <div class="col-9">
+                <div class="col-10">
                   <div class="input-group">
                     <input
                       id="txtName"
@@ -124,7 +124,10 @@
                     >
                       <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
+                    <ul
+                      id="ulALinkList"
+                      class="dropdown-menu dropdown-menu-end"
+                    >
                       <li><a class="dropdown-item aLink-create">Create</a></li>
                       <li>
                         <a class="dropdown-item aLink-search">Search</a>
@@ -133,7 +136,7 @@
                   </div>
                 </div>
 
-                <div class="col-9">
+                <div class="col-10">
                   <ul id="ulToDoList" class="list-group"></ul>
                 </div>
               </div>
