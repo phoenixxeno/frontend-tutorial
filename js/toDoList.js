@@ -87,13 +87,6 @@ $(document).ready(function () {
 
     let strId = $(this).prop('id').split('_')[1]
     let boolIsChecked = $(this).is(':checked')
-    sessionStorage.setItem(
-      'ulToDoListInfo',
-      JSON.stringify({
-        id: strId,
-        isChecked: boolIsChecked,
-      })
-    )
 
     setIsCheckedOfToDo(strId, boolIsChecked)
   })

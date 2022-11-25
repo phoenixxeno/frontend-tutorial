@@ -226,10 +226,7 @@ function setIsCheckedOfToDo(strId, boolIsChecked) {
       } else if (!toDoList || !toDoList.length) {
         $('#ulToDoList').html('暫無資料。')
       } else {
-        let { id, isChecked } = JSON.parse(
-          sessionStorage.getItem('ulToDoListInfo')
-        )
-        $('#ulToDoList').find(`.ckb_${id}`).prop('checked', isChecked)
+        $('#ulToDoList').find(`.ckb_${strId}`).prop('checked', boolIsChecked)
       }
     },
     error: function (e) {
